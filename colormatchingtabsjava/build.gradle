@@ -1,0 +1,62 @@
+apply plugin: 'com.android.library'
+apply plugin: 'com.github.dcendents.android-maven'
+apply plugin: 'com.jfrog.bintray'
+
+android {
+    compileSdkVersion 27
+    defaultConfig {
+        minSdkVersion 19
+        targetSdkVersion 27
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation 'com.android.support:appcompat-v7:27.1.1'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.1'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+}
+archivesBaseName = "android-oauth-handler"
+
+install {
+    repositories.mavenInstaller {
+        pom.project {
+            group "com.onebyte.colormatchingtabs"
+            artifactId "android-oauth-handler"
+            version "1.0.0"
+        }
+    }
+}
+bintray {
+    user = project.hasProperty('omermalix') ? project.property('omermalix') : System.getenv('BINTRAY_USER')
+    key = project.hasProperty('330efab8a26ad782594c3927f33b49af216e59ac') ? project.property('330efab8a26ad782594c3927f33b49af216e59ac') : System.getenv('BINTRAY_API_KEY')
+    // jFrog plugin must be declared for this line to work
+    configurations = ['archives']
+    // Package info for BinTray
+    pkg {
+        repo = 'maven'
+        name = 'android-oauth-handler'
+        userOrg = user
+        licenses = ['Apache-2.0']
+        vcsUrl = 'https://github.com/bintray/gradle-bintray-plugin.git'
+        version {
+            name = '0.1'
+            desc = 'Gradle Bintray Plugin 1.0 final'
+            vcsTag = '0.1'
+        }
+    }
+}
