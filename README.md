@@ -1,2 +1,1 @@
-# ColorMatchingTabsAndroid
-Color Matching Tabs for android studio
+[![](https://jitpack.io/v/omermalix/ColorMatchingTabsAndroid.svg)](https://jitpack.io/#omermalix/ColorMatchingTabsAndroid)
