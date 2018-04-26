@@ -1,4 +1,4 @@
-package onebyte.com.colormatchingtabsjava.java.colortabs;
+package onebyte.com.colortabs.colortabs;
 
 import android.content.Context;
 import android.content.res.Configuration;
@@ -16,10 +16,10 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import onebyte.com.colormatchingtabsjava.R;
-import onebyte.com.colormatchingtabsjava.java.model.ColorTab;
+import onebyte.com.colortabs.R;
+import onebyte.com.colortabs.model.ColorTab;
 
-import static onebyte.com.colormatchingtabsjava.java.Constant.ANIMATION_TEXT_APPEARANCE_DURATION;
+import static onebyte.com.colortabs.Constant.ANIMATION_TEXT_APPEARANCE_DURATION;
 
 
 public class ColorTabView extends LinearLayout implements View.OnClickListener {

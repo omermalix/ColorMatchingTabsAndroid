@@ -1,4 +1,4 @@
-package onebyte.com.colormatchingtabsjava.java;
+package onebyte.com.colortabs;
 
 public class Constant {
        public static long ANIMATION_DURATION = 200L;

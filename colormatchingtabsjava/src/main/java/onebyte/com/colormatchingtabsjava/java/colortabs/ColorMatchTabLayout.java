@@ -1,4 +1,4 @@
-package onebyte.com.colormatchingtabsjava.java.colortabs;
+package onebyte.com.colortabs.colortabs;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -13,21 +13,21 @@ import android.widget.LinearLayout;
 import java.util.ArrayList;
 import java.util.List;
 
-import onebyte.com.colormatchingtabsjava.R;
-import onebyte.com.colormatchingtabsjava.java.listeners.OnColorTabSelectedListener;
-import onebyte.com.colormatchingtabsjava.java.model.ColorTab;
+import onebyte.com.colortabs.R;
+import onebyte.com.colortabs.listeners.OnColorTabSelectedListener;
+import onebyte.com.colortabs.model.ColorTab;
 
 
 public class ColorMatchTabLayout extends HorizontalScrollView{
 
     private int INVALID_WIDTH = -1;
 
-    public static SlidingTabStripLayout tabStripLayout;
-    public static List<ColorTab> tabs= new ArrayList<>();
-    public static OnColorTabSelectedListener tabSelectedListener;
-    public static ColorTab internalSelectedTab;
-    public static long tabMaxWidth = 2147483647;
-    public static ColorTabView previousSelectedTab;
+    public SlidingTabStripLayout tabStripLayout;
+    public List<ColorTab> tabs= new ArrayList<>();
+    public OnColorTabSelectedListener tabSelectedListener;
+    public ColorTab internalSelectedTab;
+    public long tabMaxWidth = 2147483647;
+    public ColorTabView previousSelectedTab;
     private ColorTab selectedTab;
     private int selectedTabIndex;
     /**
@@ -88,6 +88,8 @@ public class ColorMatchTabLayout extends HorizontalScrollView{
         selectedTabWidth = getContext().getResources().getDimensionPixelOffset(R.dimen.tab_max_width);
         colorTab = new ColorTab();
         colorTabView = new ColorTabView(getContext());
+//        if(tabStripLayout.getChildCount() > 0)
+//            tabStripLayout.removeAllViews();
     }
 
 
@@ -146,11 +148,12 @@ public class ColorMatchTabLayout extends HorizontalScrollView{
      * @param tab ColorTab to add
      */
     public void addTab(ColorTab tab) {
-        tab.setSelected(tabs.isEmpty());
-        if (tab.isSelected) {
-            internalSelectedTab = tab;
-        }
-        addColorTabView(tab);
+            tab.setSelected(tabs.isEmpty());
+            if (tab.isSelected) {
+                internalSelectedTab = tab;
+            }
+            addColorTabView(tab);
+
     }
 
     public void addColorTabView(ColorTab tab) {
@@ -247,7 +250,7 @@ public class ColorMatchTabLayout extends HorizontalScrollView{
         }
     }
 
-    public static void select(ColorTab colorTab) {
+    public void select(ColorTab colorTab) {
         if (colorTab == internalSelectedTab) {
             return;
         } else {
@@ -260,7 +263,7 @@ public class ColorMatchTabLayout extends HorizontalScrollView{
         }
     }
 
-   public static ColorTabView getSelectedTabView(){
+   public ColorTabView getSelectedTabView(){
 //        internalSelectedTab.position = 0;
         return (ColorTabView) tabStripLayout.getChildAt(internalSelectedTab.position);
     }

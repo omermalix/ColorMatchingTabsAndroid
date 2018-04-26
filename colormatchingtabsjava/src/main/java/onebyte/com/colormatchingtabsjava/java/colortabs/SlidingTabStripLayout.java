@@ -1,4 +1,4 @@
-package onebyte.com.colormatchingtabsjava.java.colortabs;
+package onebyte.com.colortabs.colortabs;
 
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
@@ -13,26 +13,25 @@ import android.util.AttributeSet;
 import android.view.Gravity;
 import android.widget.LinearLayout;
 
-import onebyte.com.colormatchingtabsjava.R;
-import onebyte.com.colormatchingtabsjava.java.Constant;
+import onebyte.com.colortabs.R;
+import onebyte.com.colortabs.Constant;
 
 
 public class SlidingTabStripLayout extends LinearLayout {
 
-    private static float CONTROL_X1 = 0.175f;
-    private static float CONTROL_Y1 = 0.885f;
-    private static float CONTROL_X2 = 0.360f;
-    private static float CONTROL_Y2 = 1.200f;
+    private float CONTROL_X1 = 0.175f;
+    private float CONTROL_Y1 = 0.885f;
+    private float CONTROL_X2 = 0.360f;
+    private float CONTROL_Y2 = 1.200f;
     private int FIRST_TAB_POSITION = 0;
     private int INVALID_TABS_AMOUNT = 5;
 
     private Paint backgroundPaint;
     private Canvas backgroundCanvas;
-    public static boolean isAnimate = false;
-    private static float animateLeftX = 0f;
+    public boolean isAnimate = false;
+    private float animateLeftX = 0f;
     private float animateY = 0f;
     private boolean isMenuToggle = false;
-//    public static MenuToggleListener menuToggleListener;
 
     public SlidingTabStripLayout(Context context) {
         this(context, null);

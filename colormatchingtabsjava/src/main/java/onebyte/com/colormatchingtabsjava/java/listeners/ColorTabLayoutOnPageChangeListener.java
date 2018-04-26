@@ -1,11 +1,10 @@
-package onebyte.com.colormatchingtabsjava.java.listeners;
+package onebyte.com.colortabs.listeners;
 
 import android.support.v4.view.ViewPager;
 
 import java.lang.ref.WeakReference;
 
-
-import onebyte.com.colormatchingtabsjava.java.colortabs.ColorMatchTabLayout;
+import onebyte.com.colortabs.colortabs.ColorMatchTabLayout;
 
 import static android.support.v4.view.ViewPager.SCROLL_STATE_IDLE;
 import static android.support.v4.view.ViewPager.SCROLL_STATE_SETTLING;

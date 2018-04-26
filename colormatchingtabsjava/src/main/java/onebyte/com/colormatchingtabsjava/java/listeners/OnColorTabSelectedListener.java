@@ -1,7 +1,7 @@
-package onebyte.com.colormatchingtabsjava.java.listeners;
+package onebyte.com.colortabs.listeners;
 
 
-import onebyte.com.colormatchingtabsjava.java.model.ColorTab;
+import onebyte.com.colortabs.model.ColorTab;
 
 public interface OnColorTabSelectedListener {
     void onSelectedTab(ColorTab tab);

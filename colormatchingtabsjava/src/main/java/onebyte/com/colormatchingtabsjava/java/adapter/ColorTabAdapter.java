@@ -1,9 +1,9 @@
-package onebyte.com.colormatchingtabsjava.java.adapter;
+package onebyte.com.colortabs.adapter;
 
 import android.graphics.drawable.Drawable;
 
-import onebyte.com.colormatchingtabsjava.java.colortabs.ColorMatchTabLayout;
-import onebyte.com.colormatchingtabsjava.java.model.ColorTab;
+import onebyte.com.colortabs.colortabs.ColorMatchTabLayout;
+import onebyte.com.colortabs.model.ColorTab;
 
 
 public class ColorTabAdapter {

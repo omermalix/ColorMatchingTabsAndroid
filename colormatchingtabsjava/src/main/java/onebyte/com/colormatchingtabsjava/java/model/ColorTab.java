@@ -1,13 +1,13 @@
-package onebyte.com.colormatchingtabsjava.java.model;
+package onebyte.com.colortabs.model;
 
 import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 
-import onebyte.com.colormatchingtabsjava.java.colortabs.ColorTabView;
+import onebyte.com.colortabs.colortabs.ColorTabView;
 
 
 public class ColorTab {
-    public static int INVALID_POSITION = -1;
+    public int INVALID_POSITION = -1;
     public ColorTabView tabView = null;
 
     public Drawable icon = null;
